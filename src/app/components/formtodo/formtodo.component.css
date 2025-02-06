@@ -1,0 +1,33 @@
+:host{
+    display: flex;
+    width: 600px;
+    margin: 30px auto;
+}
+
+form{
+    display: flex;
+    width: 100%;
+}
+
+input{
+    flex-grow: 1;
+    margin-right: 10px;  
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button{
+    width: 90px;
+    background-color: #0088ff ;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #1285ea;
+}
