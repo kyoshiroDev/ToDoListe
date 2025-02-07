@@ -25,6 +25,9 @@ input {
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     color: white;
     font-weight: 600;
@@ -34,5 +37,4 @@ button {
     height: 25px;
     border: 1px solid darkgrey;
     cursor: pointer;
-    text-align: center;
 }
