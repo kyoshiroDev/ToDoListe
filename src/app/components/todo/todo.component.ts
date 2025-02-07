@@ -1,14 +1,21 @@
 import { Component, input, inject, OutputEmitterRef, output } from '@angular/core';
+import { NgStyle } from '@angular/common';
 import { Todo } from '../../interfaces/todo';
 import { TodoService } from '../../services/todo.service';
 
 @Component({
   selector: 'app-todo',
-  imports: [],
+  imports: [NgStyle],
   template: `
-    <input type="checkbox" name="" id="" [checked]="todo().checked" (change)="toggleComplete()">
-    <p [style.text-decoration]="todo().checked ? 'line-through' : 'none'">{{ todo().content }}</p>
-  <button (click)="deleteTodo()">X</button>`,
+  <div class="container" [ngStyle]="{'background-color': todo().checked ? 'lightgrey' : 'transparent'}">
+    <input type="checkbox" [checked]="todo().checked" (change)="toggleComplete()">
+    <p [ngStyle]="{'text-decoration': todo().checked ? 'line-through 2px' : 'none',}">
+      {{ todo().content }}
+    </p>
+    <button (click)="deleteTodo()">X</button>
+  </div>
+  `,
+    
   styleUrl: './todo.component.css'
 })
 export class TodoComponent {
