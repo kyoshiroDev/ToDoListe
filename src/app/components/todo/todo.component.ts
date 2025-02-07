@@ -9,7 +9,7 @@ import { TodoService } from '../../services/todo.service';
   template: `
   <div class="container" [ngStyle]="{'background-color': todo().checked ? 'lightgrey' : 'transparent'}">
     <input type="checkbox" [checked]="todo().checked" (change)="toggleComplete()">
-    <p [ngStyle]="{'text-decoration': todo().checked ? 'line-through 2px' : 'none',}">
+    <p [ngStyle]="{'text-decoration': todo().checked ? 'line-through' : 'none',}">
       {{ todo().content }}
     </p>
     <button (click)="deleteTodo()">X</button>
