@@ -6,8 +6,12 @@ import { TodoService } from '../../services/todo.service';
   selector: 'app-todolist',
   imports: [TodoComponent],
   template: `
-  @for(todo of todoListe(); track todo.id){
-    <app-todo [todo]="todo" (clickChange)="deleteTodo($event)"/>}
+    @for(todo of todoListe(); track todo.id){
+      <app-todo [todo]="todo" (clickChange)="deleteTodo($event)"/>
+    } @empty {
+      <h2>Tu as aucune tâches a faire relaxe !</h2>
+      <img src="./relaxe.webp" alt="bonhomme drôle sur un transat">
+    }
   `,
   styles: `
   :host{
@@ -15,7 +19,16 @@ import { TodoService } from '../../services/todo.service';
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 750px;
+    width:100%;
+
+    h2{
+      text-align:center;
+    }
+
+    img{
+      width: 70%;
+      max-width: 500px;
+    }
 }`
 })
 export class TodolistComponent {

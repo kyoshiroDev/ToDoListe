@@ -1,4 +1,4 @@
-import { effect, Injectable, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Todo } from '../interfaces/todo';
 
 @Injectable({
@@ -6,28 +6,7 @@ import { Todo } from '../interfaces/todo';
 })
 export class TodoService {
 
-  readonly todoListe = signal<Todo[]>([
-    {
-      id:1,
-      content: "liste de course à faire",
-      checked: false
-    },
-    {
-      id:2,
-      content: "liste de course à faire",
-      checked: false
-    },
-    {
-      id:3,
-      content: "liste de course à faire",
-      checked: false
-    },
-    {
-      id:4,
-      content: "liste de course à faire",
-      checked: false
-    }
-  ])
+  readonly todoListe = signal<Todo[]>([])
 
   getAll(): Todo[] {
     return this.todoListe();

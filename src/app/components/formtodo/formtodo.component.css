@@ -1,7 +1,7 @@
 :host{
     display: flex;
-    width: 600px;
-    margin: 30px auto;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 form{
@@ -15,6 +15,8 @@ input{
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 10px;
+    min-width: 250px;
+    max-width: 350px;
 }
 
 button{

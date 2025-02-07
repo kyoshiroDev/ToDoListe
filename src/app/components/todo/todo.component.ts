@@ -6,10 +6,8 @@ import { TodoService } from '../../services/todo.service';
   selector: 'app-todo',
   imports: [],
   template: `
-  <div class="container-content">
-    <input type="checkbox" name="" id="">
-    <p>{{ todo().content }}</p>
-  </div>
+    <input type="checkbox" name="" id="" [checked]="todo().checked" (change)="toggleComplete()">
+    <p [style.text-decoration]="todo().checked ? 'line-through' : 'none'">{{ todo().content }}</p>
   <button (click)="deleteTodo()">X</button>`,
   styleUrl: './todo.component.css'
 })
@@ -22,7 +20,11 @@ export class TodoComponent {
 
   readonly clickChange = output<number>();
 
-  deleteTodo() {
+  deleteTodo(): void {
     this.clickChange.emit(this.todo().id);
+  }
+
+  toggleComplete(): void {
+    this.todo().checked = !this.todo().checked;
   }
 }

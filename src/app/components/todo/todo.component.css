@@ -2,23 +2,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 100%;
     margin: 5px;
     padding: 5px 20px;
     border: 1px solid lightgray;
     border-radius: 20px;
     box-shadow: 5px 5px 4px 0px #D1D1D1;
+    width: 70%;
 }
 
-.container-content{
-    display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
-    width: 750px;
-}
-
-input{
-    border: 1px solid lightgray;
+input {
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 2px solid #ccc;
 }
 
 button {
