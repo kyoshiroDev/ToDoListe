@@ -10,11 +10,11 @@ import { TodoService } from '../../services/todo.service';
       <input type="text" formControlName="content">
       <button type="submit">Ajouter</button>
     </form>
-    @if(submit() === false){
+    @if(submit() === false && todoService.getAll().length >= 0){
     <div>
       <p>La saisie ne peut pas être vide !</p>
     </div>
-    } 
+    }
     `,
   styleUrl: './formtodo.component.css'
 })
