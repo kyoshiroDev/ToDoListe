@@ -13,9 +13,13 @@ export class TodoService {
   }
 
   addTodo(formData: Todo):void {
+    if(!formData.content || formData.content.trim() === ''){
+      alert('La saisie ne peut pas être vide !')
+    }
+    
     formData = {
       id: this.todoListe().length + 1,
-      content: formData.content,
+      content: formData.content.trim(),
       checked: false
     };
     this.todoListe.update(todos => [...todos, formData]);
