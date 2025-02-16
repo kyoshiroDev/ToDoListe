@@ -1,6 +1,6 @@
 import { Component, input, inject, OutputEmitterRef, output } from '@angular/core';
 import { NgStyle } from '@angular/common';
-import { Todo } from '../../interfaces/todo';
+import { Todo } from '../../models/todo';
 import { TodoService } from '../../services/todo.service';
 
 @Component({

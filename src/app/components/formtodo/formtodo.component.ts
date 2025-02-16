@@ -25,7 +25,7 @@ export class FormtodoComponent {
 
   protected todoForm: FormGroup = new FormGroup({
     id: new FormControl <number | null>(0),
-    content: new FormControl<string | null>('', Validators.minLength(1)),
+    content: new FormControl<string | null>(''),
     checked: new FormControl<boolean | null>(false)
   })
 
