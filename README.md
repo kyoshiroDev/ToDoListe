@@ -17,6 +17,8 @@ l'évolution du projet quand mon apprentissage de Angular gagnera en puissance s
 - Connecter l'app a un back-end pour stockage en BDD
 - Mise en place des test unitaires
 
+Si toi aussi tu veut apprendre Angular avec les bonnes pratiques c'est ici : https://easyangularkit.com?via=gregory
+
 Si vous voulez découvrir l'app c'est par ici : https://mon-app-todo.netlify.app/
 
 À bientôt pour de nouvelles aventure ...
