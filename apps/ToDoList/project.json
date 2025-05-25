@@ -42,7 +42,7 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/ToDoList/public"
+            "input": "public"
           }
         ],
         "styles": ["apps/ToDoList/src/styles.css"],
