@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npx nx build ToDoList",
+  "outputDirectory": "dist/apps/ToDoList/browser",
+  "framework": null
+}
