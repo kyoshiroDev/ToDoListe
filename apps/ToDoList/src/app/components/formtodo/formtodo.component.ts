@@ -1,5 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { TodoService } from '../../services/todo.service';
 
 @Component({
@@ -7,7 +12,7 @@ import { TodoService } from '../../services/todo.service';
   imports: [ReactiveFormsModule],
   template: `
     <form action="" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-      <input type="text" formControlName="content">
+      <input type="text" formControlName="content" />
       <button type="submit">Ajouter</button>
     </form>
     @if(submit() === false && todoService.getAll().length >= 0){
@@ -15,28 +20,28 @@ import { TodoService } from '../../services/todo.service';
       <p>La saisie ne peut pas être vide !</p>
     </div>
     }
-    `,
-  styleUrl: './formtodo.component.css'
+  `,
+  styleUrl: './formtodo.component.css',
 })
 export class FormtodoComponent {
-  protected todoService  = inject(TodoService)
+  protected todoService = inject(TodoService);
 
-  protected submit = signal(true)
+  protected submit = signal(true);
 
   protected todoForm: FormGroup = new FormGroup({
-    id: new FormControl <number | null>(0),
+    id: new FormControl<number | null>(0),
     content: new FormControl<string | null>(''),
-    checked: new FormControl<boolean | null>(false)
-  })
+    checked: new FormControl<boolean | null>(false),
+  });
 
-  onSubmit():void {
+  onSubmit(): void {
     const formData = this.todoForm.getRawValue();
-    if(!formData.content || formData.content.trim() === ''){
-      this.submit.set(false)
+    if (!formData.content || formData.content.trim() === '') {
+      this.submit.set(false);
     } else {
-    this.submit.set(true)
-    this.todoService.addTodo(formData)
-    this.todoForm.reset()
+      this.submit.set(true);
+      this.todoService.addTodo(formData);
+      this.todoForm.reset();
     }
   }
 }

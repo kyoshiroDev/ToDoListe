@@ -7,10 +7,10 @@ import { TodoService } from '../../services/todo.service';
   imports: [TodoComponent],
   template: `
     @for(todo of todoListe(); track todo.id){
-      <app-todo [todo]="todo" (clickChange)="deleteTodo($event)"/>
+    <app-todo [todo]="todo" (clickChange)="deleteTodo($event)" />
     } @empty {
-      <h2>Tu as aucune tâches a faire relaxe !</h2>
-      <img src="./relaxe.webp" alt="bonhomme drôle sur un transat">
+    <h2>Tu as aucune tâches a faire relaxe !</h2>
+    <img src="./relaxe.webp" alt="bonhomme drôle sur un transat" />
     }
   `,
   styles: `
@@ -29,7 +29,7 @@ import { TodoService } from '../../services/todo.service';
       width: 70%;
       max-width: 500px;
     }
-}`
+}`,
 })
 export class TodolistComponent {
   protected todoService = inject(TodoService);
