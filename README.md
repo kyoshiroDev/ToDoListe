@@ -1,7 +1,7 @@
 # Projet ToDoList
 
 Petit projet pour mettre en pratique mes bases en Angular 19 ce qui ma permis
-de pouvoir m'entrainer sur les conecept suivant :
+de pouvoir m'entrainer sur les concept suivant :
 
 - Création d'un composant
 - Utilisation des interfaces
@@ -17,7 +17,7 @@ l'évolution du projet quand mon apprentissage de Angular gagnera en puissance s
 - Connecter l'app a un back-end pour stockage en BDD
 - Mise en place des test unitaires
 
-Vous voulez découvrir l'app c'est par ici : https://mon-app-todo.netlify.app/
+Vous voulez découvrir l'app c'est par ici : https://to-do-liste-tau.vercel.app/
 
 Et si toi aussi tu veux apprendre à maîtriser ce framework,
 je te conseille cette formation : https://easyangularkit.com?via=gregory
